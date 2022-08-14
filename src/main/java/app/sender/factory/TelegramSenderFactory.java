@@ -6,11 +6,11 @@ import org.json.simple.parser.ParseException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class TelegramSenderFactory implements SenderFactory<TelegramSender> {
+import static app.constant.ProjectConstants.TELEGRAM_BOT_TOKEN;
+import static app.constant.ProjectConstants.TELEGRAM_KEY;
+import static app.constant.ProjectConstants.TELEGRAM_USER;
 
-    private final String TELEGRAM_BOT_TOKEN = "secret-bot-token";
-    private final String TELEGRAM_KEY = "telegram-id";
-    private final String TELEGRAM_USER = "tg_username";
+public class TelegramSenderFactory implements SenderFactory<TelegramSender> {
 
     @Override
     public TelegramSender createSender(Properties properties) throws IOException, ParseException {

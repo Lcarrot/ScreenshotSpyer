@@ -1,7 +1,7 @@
 package app.sender.factory;
 
 import app.sender.Sender;
-import app.util.PropertiesFileWorker;
+import app.util.ReadWriteProperties;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
@@ -9,9 +9,9 @@ import java.util.Optional;
 
 public class SendersFactory {
 
-    private final PropertiesFileWorker fileWorker;
+    private final ReadWriteProperties fileWorker;
 
-    public SendersFactory(PropertiesFileWorker fileWorker) {
+    public SendersFactory(ReadWriteProperties fileWorker) {
         this.fileWorker = fileWorker;
     }
 
